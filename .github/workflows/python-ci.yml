@@ -21,7 +21,7 @@ jobs:
       - name: Check code style with Black
         run: black --check src
       - name: Lint with pylint
-        run: pylint src --fail-under=8.0
+        run: pylint src --fail-under=8.0 --rcfile=src/.pylintrc
       - name: Type check with mypy
         run: mypy src
       - name: Unit tests
