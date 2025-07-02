@@ -29,5 +29,5 @@ jobs:
         run: mypy .
         working-directory: src
       - name: Unit tests
-        run: env=test pytest
+        run: APP_ENV=test pytest
         working-directory: src
