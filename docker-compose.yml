@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8005:8000"
+    volumes:
+      - ./src/:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+  db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD: lingaroPassSql
+    ports:
+      - 5435:5432
