@@ -14,8 +14,7 @@ from db_init import get_db
 from main import app
 from model.task import Task
 from request.task_request import StatusEnum
-
-SQLALCHEMY_DATABASE_URL = "sqlite:///./test/testdb.db"
+from config import SQLALCHEMY_DATABASE_URL
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL,
