@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r src/requirements.txt
       - name: Check code style with Black
-        run: black --check
+        run: black --check src
       - name: Lint with pylint
         run: pylint src --fail-under=8.0
       - name: Type check with mypy

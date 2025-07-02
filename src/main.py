@@ -8,8 +8,8 @@ from middleware.log_request_basic_information_middleware import (
 )
 from routers import manage
 
-import db_init # pylint: disable=unused-import
-import db_schema # pylint: disable=unused-import
+import db_init  # pylint: disable=unused-import
+import db_schema  # pylint: disable=unused-import
 
 app = FastAPI(title="Task Tracker API")
 app.add_middleware(AddXProcessTimeHeaderMiddleware)
