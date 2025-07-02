@@ -12,8 +12,9 @@ if not logger.hasHandlers():
     logger.addHandler(file_handler)
 logger.propagate = False
 
-class LogRequestBasicInformationMiddleware(BaseHTTPMiddleware):
+
+class LogRequestBasicInformationMiddleware(BaseHTTPMiddleware): # pylint: disable=too-few-public-methods
     async def dispatch(self, request: Request, call_next):
-        logger.info(f"Request: {request.method} {request.url.path}")
+        logger.info("Request: %s %s", request.method, request.url.path)
         response = await call_next(request)
         return response
