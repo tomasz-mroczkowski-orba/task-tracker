@@ -20,13 +20,13 @@ jobs:
         run: pip install -r requirements.txt
         working-directory: src
       - name: Check code style with Black
-        run: black --check src
+        run: black --check .
         working-directory: src
       - name: Lint with pylint
-        run: pylint src --fail-under=8.0 --rcfile=src/.pylintrc
+        run: pylint . --fail-under=8.0 --rcfile=src/.pylintrc
         working-directory: src
       - name: Type check with mypy
-        run: mypy src
+        run: mypy .
         working-directory: src
       - name: Unit tests
         run: pytest
