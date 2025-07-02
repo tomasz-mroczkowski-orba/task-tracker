@@ -23,7 +23,7 @@ jobs:
         run: black --check .
         working-directory: src
       - name: Lint with pylint
-        run: pylint . --fail-under=8.0 --rcfile=src/.pylintrc
+        run: pylint . --fail-under=8.0
         working-directory: src
       - name: Type check with mypy
         run: mypy .
